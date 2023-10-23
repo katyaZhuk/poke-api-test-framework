@@ -17,5 +17,7 @@ namespace Api.Core.Helpers
       public Response<BerryResult> GetAllBerries() => _client.GetAllBerries();
 
       public Response<PokemonResult> GetAllPokemons() => _client.GetAllPokemons();
+
+      public Response GetPokemonBy(string name) => _client.GetPokemonBy(name);
    }
 }

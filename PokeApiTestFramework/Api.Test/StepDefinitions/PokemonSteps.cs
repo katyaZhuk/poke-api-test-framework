@@ -1,5 +1,4 @@
 ﻿using Api.Core.Helpers;
-using Api.Core.Models.BerryModels;
 using Api.Core.Models.PokemonModels;
 using Api.Core.Rest.Response;
 using NUnit.Framework;
@@ -8,6 +7,7 @@ namespace Api.Test.StepDefinitions
 {
    [Binding]
    [Scope(Feature = "ValidationGet_Pokemon_Endpoint")]
+   [Scope(Feature = "ValidationGet_Pokemon_Name_Endpoint")]
    public class PokemonSteps
    {
       private readonly ClientHelper _clientHelper;
@@ -24,6 +24,14 @@ namespace Api.Test.StepDefinitions
       public void WhenITryToCallEndpoint(string endpoint)
       {
          var response = _clientHelper.GetAllPokemons();
+
+         _scenarioContext.Add(endpoint, response);
+      }
+
+      [When(@"I try to call '(get pokemon/{name})' endpoint with '(.+)' name")]
+      public void WhenITryToCallEndpointWithName(string endpoint, string name)
+      {
+         var response = _clientHelper.GetPokemonBy(name);
 
          _scenarioContext.Add(endpoint, response);
       }

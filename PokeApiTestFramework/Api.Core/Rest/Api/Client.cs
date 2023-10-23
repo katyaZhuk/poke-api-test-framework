@@ -2,6 +2,7 @@
 using Api.Core.Models.BerryModels;
 using Api.Core.Models.PokemonModels;
 using Api.Core.Rest.Response;
+using System.Net;
 
 namespace Api.Core.Rest.Api
 {
@@ -23,6 +24,20 @@ namespace Api.Core.Rest.Api
          {
             Headers = Headers,
          });
+      }
+
+      [HttpGet("/pokemon/{name}")]
+      public Response<Pokemon> GetPokemonBy(string name)
+      {
+         Request.Request request = new Request.Request(new Dictionary<string, string>
+         {
+            { "name", name },
+         })
+         {
+            Headers = Headers,
+         };
+
+         return Send<Pokemon>(request);
       }
    }
 }
