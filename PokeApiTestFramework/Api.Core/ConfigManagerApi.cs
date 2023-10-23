@@ -8,9 +8,9 @@ namespace Api.Core
    {
       static ConfigManagerApi()
       {
-         string projectDirectory = Path.Combine(DirectoryHelper.GetSolutionDirectory(), "Api.Core", "Configuration");
+         var projectDirectory = Path.Combine(DirectoryHelper.GetSolutionDirectory(), "Api.Core", "Configuration");
 
-         IConfigurationRoot configuration = new ConfigurationBuilder()
+         var configuration = new ConfigurationBuilder()
             .SetBasePath(projectDirectory)
             .AddJsonFile("appsettings.json", false)
             .Build();
