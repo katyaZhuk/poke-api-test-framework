@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Api.Test.Features
+namespace Api.Test.Features.PokemonFeatures
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,25 +20,25 @@ namespace Api.Test.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ValidationGet_Berries_Endpoint")]
-    [NUnit.Framework.CategoryAttribute("ValidationGet_Berries_Endpoint")]
-    public partial class ValidationGet_Berries_EndpointFeature
+    [NUnit.Framework.DescriptionAttribute("ValidationGet_Pokemon_Endpoint")]
+    [NUnit.Framework.CategoryAttribute("ValidationGet_Pokemon_Endpoint")]
+    public partial class ValidationGet_Pokemon_EndpointFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = new string[] {
-                "ValidationGet_Berries_Endpoint"};
+                "ValidationGet_Pokemon_Endpoint"};
         
-#line 1 "ValidationGet_Berries_Endpoint.feature"
+#line 1 "ValidationGet_Pokemon_Endpoint.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "ValidationGet_Berries_Endpoint", "Verify successful run of endpoint \'berries\' (get 200 codes)", ProgrammingLanguage.CSharp, new string[] {
-                        "ValidationGet_Berries_Endpoint"});
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/PokemonFeatures", "ValidationGet_Pokemon_Endpoint", "Verify successful run of endpoint \'pokemon\' (get 200 codes)", ProgrammingLanguage.CSharp, new string[] {
+                        "ValidationGet_Pokemon_Endpoint"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,12 +77,12 @@ namespace Api.Test.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify get \'berries\' is successful")]
-        public virtual void VerifyGetBerriesIsSuccessful()
+        [NUnit.Framework.DescriptionAttribute("Verify get \'pokemon\' is successful")]
+        public virtual void VerifyGetPokemonIsSuccessful()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify get \'berries\' is successful", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify get \'pokemon\' is successful", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -104,13 +104,13 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.When("I try to call \'get berries\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I try to call \'get pokemons\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
- testRunner.Then("the response of \'get berries\' endpoint will have successful code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the response of \'get pokemons\' endpoint will have successful code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 9
- testRunner.And("the \'get berries\' endpoint will return 20 berry models", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the \'get pokemons\' endpoint will return 20 pokemon models", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
