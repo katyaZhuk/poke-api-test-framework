@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Core", "Api.Core.csproj", "{C52244AC-1DD0-402F-AE42-5362E4B402DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Core", "Api.Core\Api.Core.csproj", "{C52244AC-1DD0-402F-AE42-5362E4B402DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Test", "..\Api.Test\Api.Test.csproj", "{A57D9B40-15F8-4201-BC84-63B416E25150}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Test", "Api.Test\Api.Test.csproj", "{A57D9B40-15F8-4201-BC84-63B416E25150}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
