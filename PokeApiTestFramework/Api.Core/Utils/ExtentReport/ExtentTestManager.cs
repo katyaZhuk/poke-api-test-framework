@@ -9,7 +9,7 @@ namespace Api.Core.Utils.ExtentReport
 {
    public static class ExtentTestManager
    {
-      private static readonly string ReportPath = Path.Combine(DirectoryHelper.GetSolutionDirectory(), "ExtentReport", "TestUiReport") + "/";
+      private static readonly string ReportPath = Path.Combine(DirectoryHelper.GetSolutionDirectory(), "ExtentReport", "TestApiReport", "index.html");
 
       public static void CreateTest(ExtentReports extent)
       {
