@@ -24,5 +24,19 @@ namespace Api.Core.Rest.Api
             Headers = Headers,
          });
       }
+
+      [HttpGet("/pokemon/{name}")]
+      public Response<Pokemon> GetPokemonBy(string name)
+      {
+         Request.Request request = new Request.Request(new Dictionary<string, string>
+         {
+            { "name", name },
+         })
+         {
+            Headers = Headers,
+         };
+
+         return Send<Pokemon>(request);
+      }
    }
 }
