@@ -37,7 +37,8 @@ namespace Api.Test.Features.PokemonFeatures
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/PokemonFeatures", "ValidationGet_Pokemon_Name_Endpoint", "Verify successful run of endpoint \'pokemon/{name}\' (get 200 codes)", ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/PokemonFeatures", "ValidationGet_Pokemon_Name_Endpoint", "Verify successful run of endpoint \'pokemon/{name}\' (get 200 codes)\r\nVerify error " +
+                    "message when name is incorrect (get 404 codes)", ProgrammingLanguage.CSharp, new string[] {
                         "ValidationGet_Pokemon_Name_Endpoint"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -87,7 +88,7 @@ namespace Api.Test.Features.PokemonFeatures
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("name", name);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify get \'pokemon/{name}\' is successful", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 6
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -107,8 +108,52 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 7
+#line 8
  testRunner.When(string.Format("I try to call \'get pokemon/{{name}}\' endpoint with \'{0}\' name", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 9
+ testRunner.Then("the response of \'get pokemon/{name}\' endpoint \'should\' have successful code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 10
+ testRunner.And(string.Format("the response of \'get pokemon/{{name}}\' endpoint should contain correct \'{0}\' mode" +
+                            "l", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify get \'pokemon/{name}\' has error message when name is incorrect")]
+        public virtual void VerifyGetPokemonNameHasErrorMessageWhenNameIsIncorrect()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify get \'pokemon/{name}\' has error message when name is incorrect", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 18
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 19
+ testRunner.When("I try to call \'get pokemon/{name}\' endpoint with incorrect name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 20
+ testRunner.Then("the response of \'get pokemon/{name}\' endpoint \'should not\' have successful code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

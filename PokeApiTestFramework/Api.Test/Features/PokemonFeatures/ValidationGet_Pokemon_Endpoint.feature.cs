@@ -107,10 +107,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I try to call \'get pokemons\' endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
- testRunner.Then("the response of \'get pokemons\' endpoint will have successful code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the response of \'get pokemons\' endpoint \'should\' have successful code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 9
- testRunner.And("the \'get pokemons\' endpoint will return 20 pokemon models", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the \'get pokemons\' endpoint should return 20 pokemon models", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
