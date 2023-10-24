@@ -51,7 +51,7 @@ namespace Api.Test.StepDefinitions
       }
 
       [Then(@"the response of '(get pokemons|get pokemon/{name})' endpoint '(should|should not)' have successful code")]
-      public void TheTheResponseOfEndpointWillHaveSuccessfulCode(string endpoint, string should)
+      public void ThenTheResponseOfEndpointWillHaveSuccessfulCode(string endpoint, string should)
       {
          var pokemonResult = _scenarioContext.Get<Response>(endpoint);
 
@@ -68,7 +68,7 @@ namespace Api.Test.StepDefinitions
       }
 
       [Then("the '(get pokemons)' endpoint should return 20 pokemon models")]
-      public void TheTheEndpointWillReturn20PokemonModels(string endpoint)
+      public void ThenTheEndpointWillReturn20PokemonModels(string endpoint)
       {
          var pokemons = _scenarioContext.Get<Response<PokemonResult>>(endpoint).SuccessModel.Results;
 
